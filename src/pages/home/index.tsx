@@ -14,8 +14,7 @@ import { Header } from 'widgets/header'
 import { $bookList, getBookListFx } from './model'
 import { useStore } from 'effector-react'
 import { Helmet } from 'react-helmet-async'
-import dayjs from 'dayjs'
-import { DeleteBookButton } from 'features/book/delete'
+import { BookItem } from 'pages/home/ui'
 
 const HomePage = () => {
   const bookList = useStore($bookList)
@@ -45,32 +44,8 @@ const HomePage = () => {
             }}
           >
             <Stack spacing={2}>
-              {bookList.map(({ _id, title, createdAt, description, author, category, price }) => (
-                <Card key={_id}>
-                  <CardContent>
-                    <Stack spacing={1}>
-                      <Stack spacing={1} direction='row' justifyContent='space-between'>
-                        <Typography color='text.secondary' variant='h5' fontWeight={700}>
-                          Title: {title}
-                        </Typography>
-                        <DeleteBookButton bookId={_id} />
-                      </Stack>
-                      <Typography color='text.secondary'>Description: {description}</Typography>
-                      <Stack
-                        direction='row'
-                        spacing={2}
-                        divider={<Divider orientation='vertical' flexItem />}
-                      >
-                        <Typography color='text.secondary'>Author: {author}</Typography>
-                        <Typography color='text.secondary'>Categody: {category}</Typography>
-                        <Typography color='text.secondary'>Price: {price}</Typography>
-                        <Typography color='text.secondary'>
-                          Created at: {dayjs(createdAt).format('MM/DD/YYYY')}
-                        </Typography>
-                      </Stack>
-                    </Stack>
-                  </CardContent>
-                </Card>
+              {bookList.map((book) => (
+                <BookItem key={book._id} {...book} />
               ))}
             </Stack>
           </Container>
