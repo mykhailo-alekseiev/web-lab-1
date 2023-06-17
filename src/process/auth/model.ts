@@ -34,7 +34,7 @@ const setAccessTokenToStorageFx = createEffect(accessTokenLocalStorage)
 const $accessToken = createStore(accessTokenLocalStorage.init(''))
   .on(signUpFx.doneData, (_, { access_token }) => access_token)
   .on(signInFx.doneData, (_, { access_token }) => access_token)
-  .reset(logoutEv)
+  .on(logoutEv, () => '')
 
 const $isAuthorized = $accessToken.map((accessToken) => Boolean(accessToken))
 
