@@ -20,8 +20,8 @@ const BookItem: FC<Props> = ({ _id, title, createdAt, description, author, categ
           <Typography color='text.secondary'>Description: {description}</Typography>
           <Stack direction='row' spacing={2} divider={<Divider orientation='vertical' flexItem />}>
             <Typography color='text.secondary'>Author: {author}</Typography>
-            <Typography color='text.secondary'>Categody: {category}</Typography>
-            <Typography color='text.secondary'>Price: {price}</Typography>
+            <Typography color='text.secondary'>Category: {category}</Typography>
+            <Typography color='text.secondary'>Price: {price}$</Typography>
             <Typography color='text.secondary'>
               Created at: {dayjs(createdAt).format('MM/DD/YYYY')}
             </Typography>

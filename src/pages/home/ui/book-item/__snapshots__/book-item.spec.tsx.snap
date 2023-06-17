@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`book item correct display 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <div
+        class="MuiStack-root css-1okj3ks-MuiStack-root"
+      >
+        <div
+          class="MuiStack-root css-jibmk2-MuiStack-root"
+        >
+          <h5
+            class="MuiTypography-root MuiTypography-h5 css-11r8vg5-MuiTypography-root"
+          >
+            Title: Title1
+          </h5>
+          <div>
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorError MuiIconButton-sizeMedium css-1jo1f9u-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+        >
+          Description: Description 1
+        </p>
+        <div
+          class="MuiStack-root css-e53awj-MuiStack-root"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+          >
+            Author: Ryan Gosling
+          </p>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiDivider-flexItem css-1tk1bks-MuiDivider-root"
+          />
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+          >
+            Category: classic
+          </p>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiDivider-flexItem css-1tk1bks-MuiDivider-root"
+          />
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+          >
+            Price: 100$
+          </p>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiDivider-flexItem css-1tk1bks-MuiDivider-root"
+          />
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
+          >
+            Created at: 06/17/2023
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

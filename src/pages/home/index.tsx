@@ -1,15 +1,5 @@
 import React, { useEffect } from 'react'
-import {
-  Backdrop,
-  Card,
-  CardContent,
-  CircularProgress,
-  Container,
-  Divider,
-  Grid,
-  Stack,
-  Typography,
-} from '@mui/material'
+import { Backdrop, CircularProgress, Container, Grid, Stack } from '@mui/material'
 import { Header } from 'widgets/header'
 import { $bookList, getBookListFx } from './model'
 import { useStore } from 'effector-react'
