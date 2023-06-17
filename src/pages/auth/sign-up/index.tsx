@@ -77,6 +77,9 @@ const SignUpPage = () => {
                   onChange={(e) => fields.name.onChange(e.target.value)}
                   error={hasError('name')}
                   helperText={errorText('name')}
+                  inputProps={{
+                    ['data-cy']: 'name',
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -90,6 +93,9 @@ const SignUpPage = () => {
                   onChange={(e) => fields.email.onChange(e.target.value)}
                   error={hasError('email')}
                   helperText={errorText('email')}
+                  inputProps={{
+                    ['data-cy']: 'email',
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -105,6 +111,9 @@ const SignUpPage = () => {
                   disabled={pending}
                   onChange={(e) => fields.password.onChange(e.target.value)}
                   helperText={errorText('password')}
+                  inputProps={{
+                    ['data-cy']: 'password',
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -121,7 +130,7 @@ const SignUpPage = () => {
                           key={value}
                           disabled={pending}
                           value={value}
-                          control={<Radio />}
+                          control={<Radio data-cy={`radio-button-${value}`} />}
                           label={label}
                         />
                       ))}
@@ -136,12 +145,18 @@ const SignUpPage = () => {
               variant='contained'
               sx={{ mt: 3, mb: 2 }}
               disabled={!eachValid || pending}
+              data-cy='sign-up-submit'
             >
               Sign Up
             </Button>
             <Grid container justifyContent='flex-end'>
               <Grid item>
-                <Link component={RouterLink} to={Page.SignIn} variant='body2'>
+                <Link
+                  component={RouterLink}
+                  to={Page.SignIn}
+                  variant='body2'
+                  data-cy='sign-in-redirect'
+                >
                   Already have an account? Sign in
                 </Link>
               </Grid>
